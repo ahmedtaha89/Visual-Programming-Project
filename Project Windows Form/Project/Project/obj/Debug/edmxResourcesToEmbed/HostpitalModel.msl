@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HospitalDBModelStoreContainer" CdmEntityContainer="HospitalDBEntities3">
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="HospitalDBModel.Employee">
+        <MappingFragment StoreEntitySet="Employee">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Salary" ColumnName="Salary" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Medicines">
+      <EntityTypeMapping TypeName="HospitalDBModel.Medicine">
+        <MappingFragment StoreEntitySet="Medicine">
+          <ScalarProperty Name="Medicine_ID" ColumnName="Medicine_ID" />
+          <ScalarProperty Name="Medicine_Name" ColumnName="Medicine_Name" />
+          <ScalarProperty Name="Medicine_Salary" ColumnName="Medicine_Salary" />
+          <ScalarProperty Name="Expiry_Date" ColumnName="Expiry_Date" />
+          <ScalarProperty Name="Production_Date" ColumnName="Production_Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PATIENTs">
+      <EntityTypeMapping TypeName="HospitalDBModel.PATIENT">
+        <MappingFragment StoreEntitySet="PATIENT">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Birthdate" ColumnName="Birthdate" />
+          <ScalarProperty Name="Smoking" ColumnName="Smoking" />
+          <ScalarProperty Name="Diabetes" ColumnName="Diabetes" />
+          <ScalarProperty Name="Pressure_disease" ColumnName="Pressure-disease" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

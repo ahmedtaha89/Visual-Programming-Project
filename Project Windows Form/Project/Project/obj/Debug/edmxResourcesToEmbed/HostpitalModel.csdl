@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HospitalDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Gender" Type="Boolean" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Salary" Type="String" />
+  </EntityType>
+  <EntityType Name="Medicine">
+    <Key>
+      <PropertyRef Name="Medicine_ID" />
+    </Key>
+    <Property Name="Medicine_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Medicine_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Medicine_Salary" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Expiry_Date" Type="DateTime" Precision="0" />
+    <Property Name="Production_Date" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="PATIENT">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Gender" Type="Boolean" />
+    <Property Name="Birthdate" Type="DateTime" Precision="0" />
+    <Property Name="Smoking" Type="Boolean" />
+    <Property Name="Diabetes" Type="Boolean" />
+    <Property Name="Pressure_disease" Type="Boolean" />
+  </EntityType>
+  <EntityContainer Name="HospitalDBEntities3" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Employees" EntityType="Self.Employee" />
+    <EntitySet Name="Medicines" EntityType="Self.Medicine" />
+    <EntitySet Name="PATIENTs" EntityType="Self.PATIENT" />
+  </EntityContainer>
+</Schema>
